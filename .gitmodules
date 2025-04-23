@@ -1,0 +1,3 @@
+[submodule "milliForth-6502"]
+	path = milliForth-6502
+	url = https://github.com/agsb/milliForth-6502.git
