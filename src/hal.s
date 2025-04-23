@@ -10,6 +10,7 @@ putchar:
     bit RIA_READY
     bpl putchar
     sta RIA_TX
+    clc
     rts
 
 byes:
