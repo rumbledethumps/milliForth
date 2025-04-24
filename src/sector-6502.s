@@ -364,8 +364,6 @@ okey:
 ;    jsr putchar
 ;    lda #'K'
 ;    jsr putchar
-;    lda #13
-;    jsr putchar
 ;    lda #10
 ;    jsr putchar
 
@@ -399,8 +397,6 @@ find:
 ;    lda #'?'
 ;    jsr putchar
 ;    lda #'?'
-;    jsr putchar
-;    lda #13
 ;    jsr putchar
 ;    lda #10
 ;    jsr putchar
@@ -520,10 +516,8 @@ getline:
 ; 7-bit ascii only
 ;    and #$7F
 ; unix \n
-    cmp #13
+    cmp #10
     bne @loop
-    lda #10
-    jsr putchar
 ; would be better with
 ; no controls
 ;    cmp #' '
@@ -891,8 +885,6 @@ def_word "words", "words", 0
 
 @each:
 
-    lda #13
-    jsr putchar
     lda #10
     jsr putchar
 
